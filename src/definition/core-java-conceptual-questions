@@ -1,38 +1,49 @@
 Please answer the below core-java Questions:
 
 What is programing language?
-A.
+A. language used in computer programming in order to produce an output
 
 
 
 What jdk contains or composed of and define each components?
-A.
+A. jdk is composed of JRE, which is java runtime environment, javac which is a compiler
+java which is the loader.
 
 
 
 What is IDE?
-A.
+A. IDE is integrated development environment which is a tool used in order to build applications.
 
 
 
 What are the IDEs available in the market to support java?
-A.
-
-
+A. Eclipse, NetBeans, Intellij
 
 Explain the entire java life cycle.
+Java source code -> java compiler -> byteCode -> JVM -> CPU
+write some code       java compiles the code        converts to bytecode  goes to the jvm and out puts to the computer
 
-what is class?
+what is class? class is a blueprint of an object
 
-What is object?
-What is the entry point of an application?
-Why main is static?
-Which class is the superclass of all classes?
-What is difference between path and classpath variables?
-What is the difference between an Interface and Abstract class?
-Can you make an Object from an Interface and Abstract class ? if not how do you use it ?
-what is Access Specifier?
-What is OOP ? Define each feature of java OOP.
+What is object? an object is an instance of the class
+
+What is the entry point of an application? the main method
+Why main is static? main is static so the compiler can call it
+Which class is the superclass of all classes? the object class is the superclass of all classes
+What is difference between path and classpath variables? path is used to find the executables, classpath is used to specify the location
+
+
+What is the difference between an Interface and Abstract class? abstract class can have abstarct and non abstract methods
+interface can have only abstract methods
+
+Can you make an Object from an Interface and Abstract class ? if not how do you use it ? No, you would have to implement the object
+what is Access Specifier? an access specifier is used to set the accessibility of classes
+What is OOP ? Define each feature of java OOP. Object Oriented Programming
+abstract-
+encapsulation
+inheritance
+polymorphism
+
 What is Java Package and which package is imported by default?
 What is API? Name list of API that you have used so far.
 Does java support multiple inheritance, explain why or why not?
