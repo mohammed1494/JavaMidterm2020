@@ -39,57 +39,124 @@ interface can have only abstract methods
 Can you make an Object from an Interface and Abstract class ? if not how do you use it ? No, you would have to implement the object
 what is Access Specifier? an access specifier is used to set the accessibility of classes
 What is OOP ? Define each feature of java OOP. Object Oriented Programming
-abstract-
-encapsulation
-inheritance
-polymorphism
+abstract- a method without any body
+encapsulation - used to hide data
+inheritance - used in order to get properties of other classes
+polymorphism - object takes on various methods
 
-What is Java Package and which package is imported by default?
+What is Java Package and which package is imported by default? java package is used in order to
+organize related classes. Java.lang package is default
 What is API? Name list of API that you have used so far.
-Does java support multiple inheritance, explain why or why not?
-What is method overloading and when it happens?
-Explain exceptions in java and how to handle it.
-What is static keyword in java? How it has been used in variables and methods ?
+API stands for application programming interface- eclipse
+Does java support multiple inheritance, explain why or why not? it can only extend one parent class
+What is method overloading and when it happens? Method Overloading allows a class to have more than one method having the same name different paramters
+
+Explain exceptions in java and how to handle it. An exception is an event, which occurs during the execution of a program, you
+can handle it by using exception handling
+
+What is static keyword in java? How it has been used in variables and methods ? static is a non access modifier
+static variable is not changed throughout the program
+static method  belongs to a class rather than an instance of a class
+
 What is final and how it has been used variables and methods?
+Final class can't be inherited, final method can't be overridden and final variable value
+
 What is final, finally and finalize?
-What is a constructor ?
-Can we have multiple constructors in a class?
-If we don't have a constructor declared, what is called during the object creation?
-What is "this" keyword in java ?
-What is "super" keyword in java? How many possible way can you use?
-What is JVM stand for ?
-Is JVM platform independent?
-What version of java are you using?
-What is JAR stand for ?
+final- class cant be inherited
+finally - will be executed regardless of exception
+finalized - cleanup process
+
+
+What is a constructor ? a method used to initalize objects
+
+Can we have multiple constructors in a class? yes
+
+If we don't have a constructor declared, what is called during the object creation? default constructor
+
+
+What is "this" keyword in java ? refers to the current object in a method or constructor
+What is "super" keyword in java? How many possible way can you use? super keyword refers to the parent class
+you can use it only one way the parent class
+What is JVM stand for ? java virtual machine
+Is JVM platform independent? jvm is dependent
+What version of java are you using? 8.0
+What is JAR stand for ? java archive
 What is the difference between JDK and JVM?
+JDK is a software development kit, JVM is an environment for executing bytecode
+
 What is the difference between JVM and JRE?
-What is compile time and run time?
-What is heap?
-How java manage it's memory?
+JRE is a software bundle that allows Java program to run JVM is an environment for executing bytecode
+What is compile time and run time? compile time is when program is compiled, runtime is when the program executes
+What is heap? place in memory to store objects
+How java manage it's memory? by allocating it in the heap
 What is the difference between String, StringBuffer and StringBuilder?
-What is Singleton class?
+Strings are immutable, and objects of StringBuffer and StringBuilder are mutable.
+StringBuilder is faster than StringBuffer
+
+What is Singleton class? class that can only have one object
+
 What is Serialization and Deserialization?
-when to use transient variable in java?
+
+Serialization is a mechanism of converting the state of an object into a byte stream. Deserialization is the reverse process
+
+when to use transient variable in java? The transient keyword in Java is used to avoid serialization
+
 Difference between while and do..while loop?
-What is Enum?
-What is Iterator?
-Which one will take more memory, an int or Integer?
-Why is String Immutable in Java?
-What is constructor chaining in Java?
+While loop is executed only when given condition is true.
+do-while loop is executed for first time no matter the condition
+
+What is Enum? a group of constants
+What is Iterator? process the entire container
+Which one will take more memory, an int or Integer? integer 128 bytecode
+Why is String Immutable in Java? because it is cached in the string pool and wont be changed
+
+What is constructor chaining in Java? use of multiple constructors
+
 The difference between Serial and Parallel Garbage Collector?
-What is JIT stands for?
+The main difference between them is that a serial collector is a default copying collector which uses only one GC thread for garbage
+collection while a parallel collector uses multiple GC threads for garbage collection.
+
+What is JIT stands for? just in time
 Explain Java Heap space and Garbage collection?
+heap is used to store objects, garbage collection gets rid of unused objects
+
 Can you guarantee the garbage collection process?
+no, it is dependent on the space
 What is the difference between stack and heap in Java?
-What is reflection in java and why is it useful?
+Heap memory is used by all the parts of the application whereas stack memory
+is used only by one thread of execution. Whenever an object is created,
+it's always stored in the Heap space and stack memory contains the reference to it.
+
+
+
+What is reflection in java and why is it useful? look into classes at runtime
+allows for creativity
+
 what is multithreading in java?
+Multithreading is a Java feature that allows
+concurrent execution of two or more parts of a program.
+
 What is the use of synchronization in Java?
-What is Framework?
-What are the testing Framework available in java?
+ used to provide exclusive access to a shared resource
+ with multiple threads in Java
+
+What is Framework? pre-written code
+
+What are the testing Framework available in java? Jbehave, JUnit , testNG
+
 Difference between jUnit and testNG?
+JUnit is an open-source framework used to trigger and write tests.
+TestNG is a Java-based framework that is an upgraded option for running tests
+
+
 What are the dependencies for this project?
+mysql-connector 8.0
+
 what is dependency injection in java?
+ objects get other required objects from outside
+
 What is static binding and dynamic binding?
+Static binding happens at compile-time while dynamic binding happens at runtime.
 
 
 

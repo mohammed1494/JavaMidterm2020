@@ -1,39 +1,93 @@
 Please answer the below Data Structure Questions:
 
 why do we need data structure?
-A.
-
+Data structure is designed to organize data in order to access the data.
 
 What are the various operations that can be performed on different Data Structures?
+You can apply the following operations Sorting, Merging, Traversing, Searching, Inserting, and Deleting.
+
 List out the areas in which data structures are applied extensively?
+Data Structures are mostly used in Database Management System, Compiler Design, Operating System, Statistical analysis
+package, Numerical Analysis, Graphics, Artificial Intelligence and Simulation.
+
 what is an Array?
+Array is used in order to store the same type of data.
+
 what is the difference between the Array and ArrayList?
+The difference with Array and ArrayList is, in Array the array size is static, it cannot be changed.
+Array uses the length function and arraylist uses the size function.
+
 what is LinkedList?
+LinkedList is a linear data structure where each element is a separate object.
+
 How is an Array different from Linked List?
+An array is a collection of elements of a similar data type. Linked List is an ordered
+collection of elements of the same type in which each element is connected to the next using pointers.
+
 what is queue?
+A queue is a data structure that is designed to have elements inserted at the end of the queue, and
+elements removed from the beginning of the queue. Queue uses the FIFO and LILO method.
+
 what is stack?
+It is a data structure that allows data to be inserted and removed. Stack follows LIFO.
+
 what is FIFO and LIFO?
-what is the order of complexity?
+FIFO: First In First Out.
+LIFO: Last In First Out.
+
 what is the best case to search an element from an array?
+Binary search
+
 what is the worst case to search an element from an array?
+Hypothetical data set.
+
 what is tree in data structure?
+A tree is a representation of the non-linear data structure.
+
 what is graph in data structure?
+Graph is set of items connected by links
+
 what is the difference between the HashTable and HashMap?
-What are the major data structures used in the following areas : RDBMS, Network data model and Hierarchical data model.
+HashTable is synchronized whereas hashMap is not synchronized.
+
+What are the major data structures used in the following areas: RDBMS, Network data model and Hierarchical data model.
+RDBMS uses Array, Network data model uses Graphs and Hierarchical data model uses Trees.
+
 How HashMap works in java?
+HashMap works by using stored mappings of key-value pairings.
+
 What is ArrayIndexOutOfBoundsException in java? When it occurs?
+ArrayIndexOutOfBoundsException is a runtime Exception. It occurs when Java program tries to
+access an illegal index.
+
 What are the different ways of copying an array into another array?
+The different ways of coping an Array into another are
+Manually, Arrays.copyOf(), System.arraycopy(), and Object.clone().
+
 What is difference between an array and a linked list?
+An array is a collection of elements of a similar data type. Linked List is an ordered
+collection of elements of the same type in which each element is connected to the next using pointers.
+
 What is DFS and BFS?
+ BFS(Breadth First Search) uses Queue data structure for finding the shortest path.
+ DFS(Depth First Search) uses Stack data structure.
+
 What is Recursion?
-What are linear and non linear data Structures?
+Recursion is a process in which a method calls itself continuously.
+
+What are linear and nonlinear data Structures?
+Linear data structures are Array, Stack, Queue and LinkedList.
+Non-Linear data structures are trees and graphs.
+
 What is Big-(O)-notation?
+It is the relative representation of the complexity of an algorithm.
+
 Outlined different kind of sorting algorithm with time complexity?
+Insertion sort, Selection sort,Merge sort, Heapsort, Quicksort, Bubble sort, Shell sort,
 
 Draw a table with time complexity in which it will summarize all the data structure feature's advantages and disadvantages.
   a)In terms of Accessing element.
   b)In terms of Inserting element.
   c)In terms of Searching element.
   d)In terms of Removing element.
-
 

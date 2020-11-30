@@ -62,6 +62,13 @@ public class CsvReader {
                 System.out.println(student.getFirstName() + " " + student.getLastName() + " " + student.getNumberOfExercisesSolved());
             }
         }
+        int size = roster.size();
+        int total = 0;
+        for (Trainee traineex: roster) {
+            total+=traineex.getNumberOfExercisesSolved();
+        }
+        System.out.println("The average number of problems solved by each student is: "+total/size);
+
 
     }
 

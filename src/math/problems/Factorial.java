@@ -12,5 +12,28 @@ public class Factorial {
          *
          */
 
+        int n = 5;
+        int result = 1;
+
+        for (int i = 1; i <= n; i++) {
+            result *= i;
+        }
+        System.out.println("Iteration method- " + result);
+        System.out.println("Recursion method- " + factorial(5));
+
     }
+    // For Recursion Method
+
+    public static int factorial(int n) {
+        if (n == 0) {
+            return 1;
+        } else {
+            return n * factorial(n - 1);
+
+        }
+
+    }
+
+
 }
+

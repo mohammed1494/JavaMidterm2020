@@ -2,18 +2,39 @@ This file contains SQL questions.
 Please read the questions and answer.
 
 What is Database?
-A.
+A structured set of data held in a computer, especially one that is accessible in various ways.
 
 What is DBMS?
+Software designed to store, retrieve, define, and manage data in a database.
+
 What is the difference between SQL and MySQL?
+SQL is a query language, whereas MySQL is a relational database that uses SQL to query a database.
+
 What is RDBMS? How is it different from DBMS?
+In DBMS, the data is stored as a file, while in RDBMS, the information is stored in tables.
+
 What are Tables and Fields?
+A table has records (rows) and fields (columns)
+
 What is SQL?
+Language for extracting and organising data that is stored in a database.
+
 What are Constraints in SQL?
+Rules in sql.
+
 What is a Primary Key?
+The PRIMARY KEY constraint uniquely identifies each record in a table.
+
 What is a Foreign Key?
+A foreign key (FK) is a column or combination of columns that is used to establish and enforce
+a link between the data in two tables to control the data that can be stored in the foreign key table
+
 What is Normalization?
+NORMALIZATION is a database design technique that reduces
+data redundancy and eliminates undesirable characteristics like Insertion.
+
 What is Denormalization?
+Denormalization is a strategy that database managers use to increase the performance of a database infrastructure.
 
 You have 2 tables given below.
 
@@ -34,13 +55,40 @@ CustomerID	   CustomerName	    CustomerPhone	     Country
 Please do the following on above Order table and Customer table:
 
 Inner Join:
+SELECT Order_Table.OrderID, Customer_Table.CustomerName
+FROM Order_Table
+INNER JOIN Customer_Table
+ON Order_Table.CustomerID = Customer_Table.CustomerID;
+
 Left Join:
+SELECT Order_Table.OrderID, Customer_Table.CustomerName
+FROM Order_Table
+INNER JOIN Customer_Table
+ON Order_Table.CustomerID = Customer_Table.CustomerID;
+
 Right Join:
+SELECT Order_Table.OrderID, Customer_Table.CustomerName
+FROM Customer_Table
+INNER JOIN Order_Table
+ON Customer_Table.CustomerID = Order_Table.CustomerID;
+
+
 Full Join:
+SELECT Order_Table.OrderID, Customer_Table.CustomerName
+FROM Customer_Table
+FULL OUTER JOIN Order_Table
+ON Customer_Table.CustomerID = Order_Table.CustomerID;
 
 On Customer Table, please Insert one row.
+Insert into Customer_table (CustomerID, CustomerName, CustomerPhone, Country)
+Values ('4', 'Mo Ali', '1-718-123-9876', 'USA')
 
 On Order Table, please Update one row.
+UPDATE Order_Table
+SET OrderID = '20509', OrderDate= '2014-09-09'
+WHERE CustomerID = 1;
+
+
 
 
 

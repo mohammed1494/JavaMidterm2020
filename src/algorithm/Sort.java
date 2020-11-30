@@ -36,6 +36,18 @@ public class Sort {
         int [] list = array;
         //implement here
 
+        int n = list.length;
+        for (int i = 1; i < n; ++i) {
+            int ex = list[i];
+            int j = i - 1;
+
+            while (j >= 0 && list[j] > ex) {
+                list[j + 1] = list[j];
+                j = j - 1;
+            }
+            list[j + 1] = ex;
+        }
+
 
 
         final long endTime = System.currentTimeMillis();
@@ -44,12 +56,25 @@ public class Sort {
         return list;
     }
 
-    public int[] bubbleSort(int [] array){
-        int [] list = array;
-        //implement here
+    public int[] bubbleSort(int[] array) {
+            final long startTime = System.currentTimeMillis();
+            int[] list = array;
+            //implement here
 
-        
-        
+            int n = list.length;
+            for (int i = 0; i < n - 1; i++) {
+                for (int j = 0; j < n - i - 1; j++) {
+                    if (list[j] > list[j + 1]) {
+                        int temp = list[j];
+                        list[j] = list[j + 1];
+                        list[j + 1] = temp;
+                    }
+                }
+            }
+
+            final long endTime = System.currentTimeMillis();
+            final long executionTime = endTime - startTime;
+            this.executionTime = executionTime;
         return list;
     }
     
@@ -83,7 +108,7 @@ public class Sort {
     }
 
 
-    public int [] bucketSort(int [] array){
+    public int [] bucketSort(int[] array, int i){
         int [] list = array;
         //implement here
         

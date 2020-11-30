@@ -1,6 +1,8 @@
 package lambdaexpression.iterator;
 
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class IterateUsingLambda {
@@ -12,12 +14,19 @@ public class IterateUsingLambda {
         itemPrice.put("TV", 700);
         itemPrice.put("Monitor", 450);
 
-		// Iterate without using Lambda
+
+        // Iterate without using Lambda
 		 for (Map.Entry<String, Integer> entry : itemPrice.entrySet()) {
 		     System.out.println("Item Name: " + entry.getKey() + " and Price: " + entry.getValue());
 		 }
 
         // Please Implement Lambda Iteration on itemPrice map
+         itemPrice.forEach((k, v)  -> System.out.println(System.out.println("Item Name: " + k + " and Price: " + v())));
+
+
+        }
+
+
 
     }
-}
+

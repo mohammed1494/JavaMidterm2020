@@ -22,7 +22,7 @@ public class Numbers {
 
 	public static void main(String[] args) throws Exception {
 		
-		int [] num = new int[10];
+		int [] num = new int[1000000];
 		storeRandomNumbers(num);
 		ConnectToSqlDB connectToSqlDB = new ConnectToSqlDB();
 		//Selection Sort
@@ -42,22 +42,51 @@ public class Numbers {
 		connectToSqlDB.insertDataFromArrayToSqlTable(num, "insertion_sort", "SortingNumbers");
 		List<String> insertionSortNumbers = connectToSqlDB.readDataBase("insertion_sort", "SortingNumbers");
 		printValue(insertionSortNumbers);
+
 		//By following above, Continue for rest of the Sorting Algorithm....
 
+		storeRandomNumbers(num);
+
+		randomize (num, n);
+
+		//Heap Sort
+		randomize(num, n);
+
+		algo.heapSort(num);
+		long heapSortExecutionTime = algo.executionTime;
+		System.out.println("Total Execution Time of " + num.length + " numbers in Heap Sort take: " + heapSortExecutionTime + " milli sec");
 
 
+		//Bubble sort
+		algo.bubbleSort(num);
+		long bubbleSortExecutionTime = algo.executionTime;
+		System.out.println("Total Execution Time of "+ num.length + " numbers in bubble Sort take: " + bubbleSortExecutionTime + " milli sec");
+
+		//Bucket Sort
+		randomize(num, n);
+
+		algo.bucketSort(num, 1000000);
+		System.out.println("Total Execution Time of " + num.length + " numbers in BucketSort take: " + algo.executionTime + " milli sec");
+
+		//Quick Sort
+		randomize(num, n);
+
+		algo.quickSort(num);
+		long quickSortExecutionTime = algo.executionTime;
+		System.out.println("Total Execution Time of " + num.length + " numbers in Quick Sort take: " + quickSortExecutionTime + " milli sec");
 
 
+		//Shell Sort
+		randomize(num, n);
+
+		algo.shellSort(num);
+		long shellSortExecutionTime = algo.executionTime;
+		System.out.println("Total Execution Time of " + num.length + " numbers in Shell Sort take: " + shellSortExecutionTime + " milli sec");
 
 
+		//Come to conclusion about which Sorting Algo is better in given data set.
 
-
-
-
-
-
-
-		//Come to conclusion about which Sorting Algo is better in given data set of 1000000.
+		//Bucket Sort is better in this case, because there is a wide range of data set.
 
 	}
 
