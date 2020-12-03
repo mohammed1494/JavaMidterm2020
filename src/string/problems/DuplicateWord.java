@@ -27,7 +27,7 @@ public class DuplicateWord {
             Map.put(word, count + 1);
         }
         for(Map.Entry<String, Integer> stEntry : Map.entrySet()){
-            System.out.println("word '"+ stEntry.getKey() + "'" + ": " + stEntry.getValue() + " times");
+            System.out.println(" the word '"+ stEntry.getKey() + "'" + ": " + stEntry.getValue() + " times");
         }
 
     }

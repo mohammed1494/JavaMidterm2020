@@ -18,6 +18,7 @@ public class Anagram {
 
         System.out.println(isAnagram(a,b));
         System.out.println(isAnagram(c,d));
+
     }
     public static boolean isAnagram(String str1, String str2 ){
         if (str1.length()!= str2.length()){

@@ -16,17 +16,18 @@ public class IterateUsingLambda {
 
 
         // Iterate without using Lambda
-		 for (Map.Entry<String, Integer> entry : itemPrice.entrySet()) {
-		     System.out.println("Item Name: " + entry.getKey() + " and Price: " + entry.getValue());
-		 }
+        for (Map.Entry<String, Integer> entry : itemPrice.entrySet()) {
+            System.out.println("Item Name: " + entry.getKey() + " and Price: " + entry.getValue());
 
-        // Please Implement Lambda Iteration on itemPrice map
-         itemPrice.forEach((k, v)  -> System.out.println(System.out.println("Item Name: " + k + " and Price: " + v())));
+
+            // Please Implement Lambda Iteration on itemPrice map
+
+            itemPrice.forEach((k, v) -> System.out.println("Item Name: " + k + " and Price: " + v));
 
 
         }
 
 
-
     }
+}
 

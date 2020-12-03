@@ -19,16 +19,16 @@ public class Factorial {
             result *= i;
         }
         System.out.println("Iteration method- " + result);
-        System.out.println("Recursion method- " + factorial(5));
+        System.out.println("Recursion method- " + rec(5));
 
     }
     // For Recursion Method
 
-    public static int factorial(int n) {
+    public static int rec(int n) {
         if (n == 0) {
             return 1;
         } else {
-            return n * factorial(n - 1);
+            return n * rec(n - 1);
 
         }
 

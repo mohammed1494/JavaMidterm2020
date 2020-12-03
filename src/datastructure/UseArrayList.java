@@ -24,6 +24,7 @@ public class UseArrayList {
 		arrayex.add(2,"Dennis Schroder");
 
 
+
 		System.out.println("Iterator ");
 		Iterator it = arrayex.iterator();
 		while(it.hasNext()){

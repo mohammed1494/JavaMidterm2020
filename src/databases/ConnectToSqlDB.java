@@ -119,6 +119,7 @@ public class ConnectToSqlDB {
             connectToSqlDatabase();
             ps = connect.prepareStatement("INSERT INTO "+tableName+" ( "+columnName+" ) VALUES(?)");
             ps.setString(1,ArrayData);
+
             ps.executeUpdate();
         } catch (IOException e) {
             e.printStackTrace();
@@ -145,7 +146,7 @@ public class ConnectToSqlDB {
         return data;
     }
 
-    public void insertDataFromArrayListToSqlTable(List<Student> list, String tableName, String columnName)
+    public static void insertDataFromArrayListToSqlTable(List<Student> list, String tableName, String columnName)
     {
         try {
             connectToSqlDatabase();
@@ -155,8 +156,11 @@ public class ConnectToSqlDB {
             ps.executeUpdate();
             for(Student st:list){
                 ps = connect.prepareStatement("INSERT INTO "+tableName+" ( "+columnName+" ) VALUES(?)");
-                ps.setObject(1,st);
-                ps.executeUpdate();
+                ps.setObject(1,st.getFirstName());
+                ps.setObject(2,st.getLastName());
+                ps.setObject(3,st.getScore());
+                ps.setObject(4,st.getId());
+                ps.execute();
             }
 
         } catch (IOException e) {
@@ -169,14 +173,17 @@ public class ConnectToSqlDB {
     }
 
 
-    public void insertProfileToSqlTable(String tableName, String columnName1, String columnName2)
-    {
+    public static List<StudentsInfo> insertProfileToSqlTable(String tableName, String columnName1, String columnName2, String columnName3, String columnName4)
+    { List<StudentsInfo> listt = new ArrayList<>();
+        StudentsInfo sinfo = null;
         try {
             connectToSqlDatabase();
                 ps = connect.prepareStatement("INSERT INTO "+tableName+" ( " + columnName1 + "," + columnName2 + " ) VALUES(?,?)");
-                ps.setString(1,"Ankita Sing");
-                ps.setInt(2,3590);
-                ps.executeUpdate();
+                ps.setString(1,"Mohammed ");
+                ps.setString(2,"Ali");
+                ps.setString(3, "100");
+                ps.setString(4, "1011");
+                ps.execute();
 
 
         } catch (IOException e) {
@@ -186,6 +193,7 @@ public class ConnectToSqlDB {
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
+        return listt;
     }
 
     public static List<User> readUserProfileFromSqlTable()throws IOException, SQLException, ClassNotFoundException{
@@ -218,9 +226,15 @@ public class ConnectToSqlDB {
     }
 
     public static void main(String[] args)throws IOException, SQLException, ClassNotFoundException {
-        List<User> list = readUserProfileFromSqlTable();
-        for(User user:list){
-            System.out.println(user.getStName() + " " + user.getStID()+ " " + user.getStDOB());
+        List<StudentsInfo> listt = insertProfileToSqlTable("Students", "firstName", "lastName", "score", "id");
+        for(StudentsInfo sInfo:listt){
+            System.out.println(sInfo.getFirstName() + " " + sInfo.getLastName() + " "
+            + sInfo.getScore() + " " + sInfo.getId());
         }
+
+//        List<User> list = readUserProfileFromSqlTable();
+//        for(User user:list){
+//            System.out.println(user.getStName() + " " + user.getStID()+ " " + user.getStDOB());
+//        }
     }
 }

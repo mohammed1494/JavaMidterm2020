@@ -47,11 +47,10 @@ public class Numbers {
 
 		storeRandomNumbers(num);
 
+
 		randomize (num, n);
 
 		//Heap Sort
-		randomize(num, n);
-
 		algo.heapSort(num);
 		long heapSortExecutionTime = algo.executionTime;
 		System.out.println("Total Execution Time of " + num.length + " numbers in Heap Sort take: " + heapSortExecutionTime + " milli sec");
@@ -71,9 +70,9 @@ public class Numbers {
 		//Quick Sort
 		randomize(num, n);
 
-		algo.quickSort(num);
-		long quickSortExecutionTime = algo.executionTime;
-		System.out.println("Total Execution Time of " + num.length + " numbers in Quick Sort take: " + quickSortExecutionTime + " milli sec");
+		//algo.quickSort(int[] array, int a, int b);
+			long quickSortExecutionTime = algo.executionTime;
+			System.out.println("Total Execution Time of " + num.length + " numbers in Quick Sort take: " + quickSortExecutionTime + " milli sec");
 
 
 		//Shell Sort

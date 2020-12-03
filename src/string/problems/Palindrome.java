@@ -13,7 +13,7 @@ public class Palindrome {
         Scanner ex = new Scanner(System.in);
         word = ex.next();
 
-        //String inputString = "listen";
+
         int length = word.length();
         int i, begin, end, middle;
 
